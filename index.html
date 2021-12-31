@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="/assets/css/base.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/grid.css">
-    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -108,8 +108,9 @@
                                     <i class="header__navbar-icon far fa-question-circle"></i>Trợ giúp</a>
                             </li>
 
-                            <!-- <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng ký</li>
-                            <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li> -->
+                            <li class="header__navbar-item header__navbar-item--strong js-modal-register header__navbar-item--separate">Đăng ký</li>
+                            <li class="header__navbar-item header__navbar-item--strong js-modal-login">Đăng nhập</li>
+<!--                             
                             <li class="header__navbar-item header__navbar-user">
                                 <img src="./assets/img/user.jpg" alt="User" class="header__navbar-user-img">
                                 <span class="header__navbar-user-name">Krub Nguyễn</span>
@@ -128,14 +129,11 @@
                                         <a href="">Đăng xuất</a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                         </ul>
                     </nav>
                     <div class="header-with-search">
                         <div class="mobile-btn">
-                            <!-- <label for="mobile-sidebar-checkbox" class="mobile-header-sidebar">
-                                <i class="fas fa-bars"></i>
-                            </label> -->
                             <label for="mobile-search-checkbox" class="mobile-header-search">
                                 <i class="fas fa-search"></i>
                             </label>
@@ -1061,15 +1059,15 @@
         </footer>
     </div>
     
-    <!-- <div class="modal">
+    <div class="modal js-modal">
         <div class="modal__overlay"></div>
-        <div class="modal__body"> -->
+        <div class="modal__body">
             <!-- Register form -->
-            <!-- <div class="auth-form">
-                <div class="auth-form__container">
+            <div class="auth-form js-register-form hide-on">
+                <div class="auth-form__container js-modal-container">
                     <div class="auth-form__header">
                         <h3 class="auth-form__heading">Đăng ký</h3>
-                        <span class="auth-form__switch-btn">Đăng nhập</span>
+                        <span class="auth-form__switch-btn js-switch-btn-resgister">Đăng nhập</span>
                     </div>
 
                     <div class="auth-form__form">
@@ -1091,7 +1089,7 @@
                         </p>
                     </div>
                     <div class="auth-form__controls">
-                        <button class="btn mr-6 hover-normal">Trở lại</button>
+                        <button class="btn mr-6 hover-normal js-out-register">Trở lại</button>
                         <button class="btn btn--primary ">Đăng ký</button>
                     </div>
                 </div>
@@ -1106,14 +1104,14 @@
                         <span>Kết nối với Google</span>
                     </a>
                 </div>
-            </div> -->
+            </div>
             
               <!-- Login form -->
-              <!-- <div class="auth-form">
-                <div class="auth-form__container">
+              <div class="auth-form js-login-form hide-on">
+                <div class="auth-form__container js-modal-container">
                     <div class="auth-form__header">
                         <h3 class="auth-form__heading">Đăng nhập</h3>
-                        <span class="auth-form__switch-btn">Đăng ký</span>
+                        <span class="auth-form__switch-btn js-switch-btn-login">Đăng ký</span>
                     </div>
 
                     <div class="auth-form__form">
@@ -1132,7 +1130,7 @@
                         </div>
                    </div>
                     <div class="auth-form__controls">
-                        <button class="btn mr-6 hover-normal">Trở lại</button>
+                        <button class="btn mr-6 hover-normal js-out-login">Trở lại</button>
                         <button class="btn btn--primary ">Đăng nhập</button>
                     </div>
                 </div>
@@ -1147,8 +1145,67 @@
                         <span>Kết nối với Google</span>
                     </a>
                 </div>
-            </div> -->
-        <!-- </div>
-    </div> -->
+            </div>
+        </div>
+    </div>
+    <script>
+        var modal = document.querySelector('.js-modal')
+
+        var loginBtn = document.querySelector('.js-modal-login')
+        var logoutBtn = document.querySelector('.js-out-login')
+        var switchLoginBtn = document.querySelector('.js-switch-btn-login')
+
+        var resBtn = document.querySelector('.js-modal-register')
+        var outresBtn = document.querySelector('.js-out-register')
+        var switchResBtn = document.querySelector('.js-switch-btn-resgister')
+
+        var login = document.querySelector('.js-login-form')
+        var res = document.querySelector('.js-register-form')
+
+        var modalContainer = document.querySelector('.js-modal-container')
+
+
+
+        function getLogin () {
+            modal.classList.add('activemodal')
+            login.classList.add('login-form')
+        }
+        function outLogin () {
+            modal.classList.remove('activemodal')
+            login.classList.remove('login-form')
+        }
+
+        function getRes () {
+            modal.classList.add('activemodal')
+            res.classList.add('register-form')
+        }
+        function outRes () {
+            modal.classList.remove('activemodal')
+            res.classList.remove('register-form')
+        }
+
+        function switchLogin () {
+            login.classList.remove('login-form')
+            res.classList.add('register-form')
+        }
+        function switchRes () {
+            res.classList.remove('register-form')
+            login.classList.add('login-form')
+        }
+
+        loginBtn.addEventListener("click", getLogin)
+        logoutBtn.addEventListener("click", outLogin)
+        switchLoginBtn.addEventListener("click",switchLogin)
+
+        resBtn.addEventListener("click", getRes)
+        outresBtn.addEventListener("click", outRes)
+        switchResBtn.addEventListener("click", switchRes)
+
+        modal.addEventListener('click',outLogin)
+        modal.addEventListener('click',outRes)
+        modalContainer.addEventListener('click',function (event) {
+        event.stopPropagation()
+       })
+    </script>
 </body>
 </html>

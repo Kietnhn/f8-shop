@@ -282,6 +282,7 @@
     background-color: var(--white-color);
     border-radius: 5px;
     overflow: hidden;
+    display: none;
 }
 
 .auth-form__container{
@@ -306,8 +307,11 @@
     font-weight: 600;
     color: var(--primary-color);
     cursor: pointer;
+    padding: 12px 0 12px 12px;
 }
-
+.auth-form__switch-btn:hover{
+    text-decoration: underline;
+}
 
 .auth-form__input{
     width: 100%;
@@ -389,6 +393,11 @@
 .auth-form__hepl-link--forget{
     color: var(--primary-color);
 }
+.auth-form__hepl-link--forget:hover,
+.auth-form__hepl-link:hover{
+    text-decoration: underline;
+}
+
 /* header search */
 .header-with-search{
     display: flex;
