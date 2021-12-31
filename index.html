@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="/assets/css/base.css">
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/grid.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -16,8 +18,8 @@
 <body>
     <div class="main">
             <header class="header">
-                <div class="grid">
-                    <nav class="header__navbar">
+                <div class="grid wide">
+                    <nav class="header__navbar hide-on">
                         <ul class="header__navbar-list header__navbar-list-1">
                             <li class="header__navbar-item header__navbar-item-QR header__navbar-item--separate">
                                 Vào cửa hàng trên ứng dụng Shoppee
@@ -130,13 +132,22 @@
                         </ul>
                     </nav>
                     <div class="header-with-search">
-                        <div class="header__logo">
+                        <div class="mobile-btn">
+                            <!-- <label for="mobile-sidebar-checkbox" class="mobile-header-sidebar">
+                                <i class="fas fa-bars"></i>
+                            </label> -->
+                            <label for="mobile-search-checkbox" class="mobile-header-search">
+                                <i class="fas fa-search"></i>
+                            </label>
+                        </div>
+                        <div class="header__logo hide-on-tablet">
                             <a href="/" class="header__logo-link">
                                 <i class="header__logo-shopee fab fa-shopify"></i>
                                 <span class="Shopee">Shopee</span>
                             </a>
                         </div>
-                        <div class="header__search">
+                        <input type="checkbox" hidden id="mobile-search-checkbox" class="header_search-checkbox">
+                        <div class="header__search ">
                             <div class="header__search-wrap">
                                 <input type="text" class="header__search-btn" placeholder="Nhập để tìm kiếm">
                                 <!-- Search history -->
@@ -243,122 +254,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                          
-                                        <li class="header__cart-item">
-                                            <img src="/assets/img/SPshopee.jpg" alt="SPshopee" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Sản phẩm shopee 1</h5>
-                                                    <div class="header__cart-item-wrap">
-                                                        <span class="header__cart-price">250.000.000đ</span>
-                                                        <span class="header__cart-muti">x</span>
-                                                        <span class="header__cart-qnt">3</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-dst">
-                                                        Phân loại: Bạc
-                                                    </span>
-                                                    <span class="header__cart-item-remove">Xóa</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="header__cart-item">
-                                            <img src="/assets/img/SPshopee.jpg" alt="SPshopee" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Sản phẩm shopee 1</h5>
-                                                    <div class="header__cart-item-wrap">
-                                                        <span class="header__cart-price">250.000.000đ</span>
-                                                        <span class="header__cart-muti">x</span>
-                                                        <span class="header__cart-qnt">3</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-dst">
-                                                        Phân loại: Bạc
-                                                    </span>
-                                                    <span class="header__cart-item-remove">Xóa</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="header__cart-item">
-                                            <img src="/assets/img/SPshopee.jpg" alt="SPshopee" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Sản phẩm shopee 1</h5>
-                                                    <div class="header__cart-item-wrap">
-                                                        <span class="header__cart-price">250.000.000đ</span>
-                                                        <span class="header__cart-muti">x</span>
-                                                        <span class="header__cart-qnt">3</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-dst">
-                                                        Phân loại: Bạc
-                                                    </span>
-                                                    <span class="header__cart-item-remove">Xóa</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                          
-                                        <li class="header__cart-item">
-                                            <img src="/assets/img/SPshopee.jpg" alt="SPshopee" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Sản phẩm shopee 1</h5>
-                                                    <div class="header__cart-item-wrap">
-                                                        <span class="header__cart-price">250.000.000đ</span>
-                                                        <span class="header__cart-muti">x</span>
-                                                        <span class="header__cart-qnt">3</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-dst">
-                                                        Phân loại: Bạc
-                                                    </span>
-                                                    <span class="header__cart-item-remove">Xóa</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="header__cart-item">
-                                            <img src="/assets/img/SPshopee.jpg" alt="SPshopee" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Sản phẩm shopee 1</h5>
-                                                    <div class="header__cart-item-wrap">
-                                                        <span class="header__cart-price">250.000.000đ</span>
-                                                        <span class="header__cart-muti">x</span>
-                                                        <span class="header__cart-qnt">3</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-dst">
-                                                        Phân loại: Bạc
-                                                    </span>
-                                                    <span class="header__cart-item-remove">Xóa</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="header__cart-item">
-                                            <img src="/assets/img/SPshopee.jpg" alt="SPshopee" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Sản phẩm shopee 1</h5>
-                                                    <div class="header__cart-item-wrap">
-                                                        <span class="header__cart-price">250.000.000đ</span>
-                                                        <span class="header__cart-muti">x</span>
-                                                        <span class="header__cart-qnt">3</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-dst">
-                                                        Phân loại: Bạc
-                                                    </span>
-                                                    <span class="header__cart-item-remove">Xóa</span>
-                                                </div>
-                                            </div>
-                                        </li>
+                                        
                                     </ul>
                                     <button class="header__cart-item-btn btn btn--primary">Xem giỏ hàng</button>
                                 </div>
@@ -366,11 +262,27 @@
                         </div>
                     </div>
                 </div>
+                <ul class="header__sort-bar">
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Liên quan</a>
+                    </li>
+                    <li class="header__sort-item header__sort-item--active">
+                        <a href="" class="header__sort-link">Mới nhất</a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Bán chạy</a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Giá</a>
+                    </li>
+                </ul>
             </header>
         <div class="app__contener">
-           <div class="grid">
-                <div class="grid__row pt-36">
-                    <div class="grid__col-2">
+           <div class="grid wide">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 m-0 c-0">
+                        <!-- <input type="checkbox" hidden id="mobile-sidebar-checkbox" class="header_sidebar-checkbox"> -->
+                        <!-- <div class="oveflow"></div> -->
                         <nav class="category">
                             <h3 class="category-heading">
                                 <i class="category-heading-icon fas fa-list"></i>
@@ -395,8 +307,8 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="grid__col-10">
-                        <div class="home-fliter">
+                    <div class="col l-10 m-12 c-12">
+                        <div class="home-fliter hide-on">
                             <span class="home-fliter-label">Sắp xếp theo</span>
                             <button class="home-fliter-btn btn">Phổ biến</button>
                             <button class="home-fliter-btn btn btn--primary">Mới nhất</button>
@@ -430,10 +342,35 @@
                                 </div>
                             </div>
                         </div>
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                            </ul>
+                        </nav>
                         <div class="home-product">
-                            <div class="grid__row">
+                            <div class="row sm-gutter">
                                 <!--  -->
-                                <div class="grid__col-2-10">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href=""#>
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/SPshopee.jpg')"></div>
                                         <h4 class="home-product-item__name">Sản phẩm Shopee uy tính chất lượng hàng đầu Việt Nam</h4>
@@ -469,7 +406,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-10">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href=""#>
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/SPshopee.jpg')"></div>
                                         <h4 class="home-product-item__name">Sản phẩm Shopee uy tính chất lượng hàng đầu Việt Nam</h4>
@@ -505,7 +442,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-10">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href=""#>
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/SPshopee.jpg')"></div>
                                         <h4 class="home-product-item__name">Sản phẩm Shopee uy tính chất lượng hàng đầu Việt Nam</h4>
@@ -541,7 +478,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-10">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href=""#>
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/SPshopee.jpg')"></div>
                                         <h4 class="home-product-item__name">Sản phẩm Shopee uy tính chất lượng hàng đầu Việt Nam</h4>
@@ -577,7 +514,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-10">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href=""#>
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/SPshopee.jpg')"></div>
                                         <h4 class="home-product-item__name">Sản phẩm Shopee uy tính chất lượng hàng đầu Việt Nam</h4>
@@ -613,7 +550,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-10">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href=""#>
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/SPshopee.jpg')"></div>
                                         <h4 class="home-product-item__name">Sản phẩm Shopee uy tính chất lượng hàng đầu Việt Nam</h4>
@@ -649,7 +586,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-10">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href=""#>
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/SPshopee.jpg')"></div>
                                         <h4 class="home-product-item__name">Sản phẩm Shopee uy tính chất lượng hàng đầu Việt Nam</h4>
@@ -685,7 +622,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-10">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href=""#>
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/SPshopee.jpg')"></div>
                                         <h4 class="home-product-item__name">Sản phẩm Shopee uy tính chất lượng hàng đầu Việt Nam</h4>
@@ -721,7 +658,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-10">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href=""#>
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/SPshopee.jpg')"></div>
                                         <h4 class="home-product-item__name">Sản phẩm Shopee uy tính chất lượng hàng đầu Việt Nam</h4>
@@ -757,7 +694,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-10">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href=""#>
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/SPshopee.jpg')"></div>
                                         <h4 class="home-product-item__name">Sản phẩm Shopee uy tính chất lượng hàng đầu Việt Nam</h4>
@@ -793,7 +730,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-10">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href=""#>
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/SPshopee.jpg')"></div>
                                         <h4 class="home-product-item__name">Sản phẩm Shopee uy tính chất lượng hàng đầu Việt Nam</h4>
@@ -829,7 +766,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-10">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href=""#>
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/SPshopee.jpg')"></div>
                                         <h4 class="home-product-item__name">Sản phẩm Shopee uy tính chất lượng hàng đầu Việt Nam</h4>
@@ -865,7 +802,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-10">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href=""#>
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/SPshopee.jpg')"></div>
                                         <h4 class="home-product-item__name">Sản phẩm Shopee uy tính chất lượng hàng đầu Việt Nam</h4>
@@ -901,7 +838,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-10">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href=""#>
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/SPshopee.jpg')"></div>
                                         <h4 class="home-product-item__name">Sản phẩm Shopee uy tính chất lượng hàng đầu Việt Nam</h4>
@@ -937,7 +874,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-10">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href=""#>
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/SPshopee.jpg')"></div>
                                         <h4 class="home-product-item__name">Sản phẩm Shopee uy tính chất lượng hàng đầu Việt Nam</h4>
@@ -1013,9 +950,9 @@
            </div>
         </div>
         <footer class="footer">
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid__col-2-10">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer-header">Chăm sóc khách hàng</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -1029,7 +966,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__col-2-10">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer-header">Về TICKID</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -1043,7 +980,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__col-2-10">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer-header">Danh mục</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -1057,8 +994,8 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__col-2-10">
-                        <h3 class="footer-header">Theo dõi chúng tôi trên</h3>
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer-header">Theo dõi chúng tôi</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
                                 <a href="" class="footer-item__link">
@@ -1077,7 +1014,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__col-2-10">
+                    <div class="col l-2-4 m-8 c-12 ">
                         <h3 class="footer-header">Vào cửa hàng trên ứng dụng</h3>
                         <div class="footer-download">
                             <img src="./assets/img/QR-code-shopee.png" alt="" class="footer-download-qr">
@@ -1088,7 +1025,7 @@
                                 <a href="" class="footer-download-app-link">
                                     <img src="./assets/img/Appstore.png" alt="" class="footer-download-app-icon">
                                 </a>
-                                <a href="" class="footer-download-app-link">
+                                <a href="" class="footer-download-app-link" style="padding-top: 4px;">
                                     <img src="./assets/img/AppGallery.png" alt="" class="footer-download-app-icon">
                                 </a>
                             </div>
@@ -1101,18 +1038,18 @@
         </footer>
         <footer>
             <div class="footer-bottom">
-                <div class="grid-800">
-                    <div class="grid__row footer-policy">
-                        <div class="grid__col-4">
+                <div class="grid wide">
+                    <div class="row footer-policy">
+                        <div class="col l-3 m-3 c-6  footer-policy-item">
                             <a href="" class="footer-policy-bh">Chính sách bảo mật</a>
                         </div>
-                        <div class="grid__col-4">
+                        <div class="col l-3 m-3 c-6  footer-policy-item">
                             <a href="" class="footer-policy-bh">Chính sách bảo mật</a>
                         </div>
-                        <div class="grid__col-4 ">
+                        <div class="col l-3 m-3 c-6 hide-on-mobile footer-policy-item ">
                             <a href="" class="footer-policy-bh">Chính sách bảo mật</a>
                         </div>
-                        <div class="grid__col-4 ">
+                        <div class="col l-3 m-3 c-6 hide-on-mobile footer-policy-item ">
                             <a href="">Chính sách bảo mật</a>
                         </div>
                     </div>

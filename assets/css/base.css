@@ -3,6 +3,8 @@
     --black-color: #000;
     --text-color: #333;
     --primary-color: #ee4d2d;
+    --header-height: 68px;
+    --header-sort-bar-height: 46px;
 }
 *{
     box-sizing: inherit;
@@ -28,19 +30,13 @@ html{
 .hover-normal:hover{
     background-color: rgba(0,0,0,0.1);
 }
-.grid{
-    width: 1200px;
-    max-width: 100%;
-    margin: 0 auto;
-}
+
 .grid-800{
     width: 800px;
     max-width: 100%;
     margin: 0 auto;
 }
-.grid__full-width{
-    width: 100%;
-}
+
 .grid__row{
     display: flex;
     flex-wrap: wrap;
@@ -200,8 +196,5 @@ html{
     border-radius: 2px;
 }
 
-.pagination-icon{
-
-}
 
 
